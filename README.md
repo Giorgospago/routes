@@ -2,7 +2,7 @@
 Simple Routing System for IEK ΔΕΛΤΑ Students
 
 ## Install
-incloud the script in your project
+Include the script in your project
 ```html
 <script src="//develobird.gr/routes.js"></script>
 ```
