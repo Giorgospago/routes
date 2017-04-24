@@ -15,7 +15,7 @@ Routes({
     alert("You are at home path");
   },
   "users": function(){
-    alert("You are as users path");
+    alert("You are at users path");
   },
   "users/:user_id": function(){
     alert("You are watching the user with id " + UrlParams.user_id);
