@@ -1,5 +1,5 @@
 /* GLOBAL VARIABLES */
-var default_path = "/#/";
+var default_path = "/";
 var UrlParams = {};
 
 function getParmsFromURLHash() {
@@ -34,7 +34,8 @@ function initializeRouter(customRoutes){
 	if(!params){
 		if(customRoutes.default){
 			default_path = "#"+(customRoutes.default.charAt(0) != "/"?"/":"")+customRoutes.default;
-			location.assign(default_path);
+			window.location.hash = default_path;
+			e.preventDefault();
 		}
 		return false;
 	}
@@ -99,6 +100,7 @@ function initializeRouter(customRoutes){
 	}
 	
 	// Else send to Home
-	location.assign(default_path);
+	window.location.hash = default_path;
+	e.preventDefault();
 	return false;
 }
